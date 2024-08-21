@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleControls" class="carouselslide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="{% static 'images/medium-shot-women-working-together (1).jpg' %}" class="d-block w-100" alt="...">
@@ -22,22 +22,158 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  {% comment %} debut Section Hero ou le directeur parle avec sa photo {% endcomment %}
-<section class="largeur">
-    <section class="hero">
-      <div class="picture">
-        <img src="{% static 'images/photodemrAke.jpg' %}" alt="photodemrAke.jpg">
+  <!--  DEBUT DE LA SECTION HERO -->
+<section class="hero">
+  <div  class="container my-4">
+    <div  class="row">
+      <div class="col-lg-6">
+        <img  class="small-image"   class="w-100 shadow" src="{% static 'images/photodemrAke.jpg' %}" />
       </div>
-  <div>
-    <h1>Robbie Lens Photographie</h1>
-    <p>Bienvenue à la Cellule de Promotion  Informatique !
-      Notre centre se consacre à l'excellence dans le domaine de l'informatique. Nous offrons une gamme complète de programmes, des bases de l'informatique aux technologies avancées comme l'intelligence artificielle et la cybersécurité, tous élaborés par des experts du secteur.
-      Notre mission est de fournir une formation de qualité, axée sur des compétences pratiques et adaptées aux évolutions technologiques. Nos formateurs expérimentés sont là pour vous guider et vous préparer aux défis du marché du travail.
-      En rejoignant notre centre, vous accédez à un réseau professionnel étendu, ouvrant des opportunités de stages et d'emplois dans des entreprises de premier plan.
-      Explorez notre site pour en savoir plus sur nos programmes et services. N'hésitez pas à nous contacter pour toute question.</p>
+      <div class="col-lg-6">
+        <div class="p-5 mt-4">
+            <h3 class="display-4">Mot du directeur</h3>
+            <p class="leader">Bienvenue à la <strong>Cellule de Promotion Informatique</strong> !
+              Notre centre offre des formations complètes en Microsoft, Sage, Infographie, ainsi que des qualifications en Caisse et Maintenance informatique et réseaux. Nos programmes sont conçus pour vous fournir des compétences pratiques et adaptées aux besoins du marché.
+              
+              Nos formateurs expérimentés vous préparent aux défis professionnels, tout en vous connectant à un réseau d'opportunités de stages et d'emplois.
+               </p>
+          
+          </div>
+      </div>
   </div>
-
-  </section>
 </section>
-{% comment %} debut Section Hero ou le directeur parle avec sa photo {% endcomment %}
+<!--  FIN DE LA SECTION HERO -->
+<!--  DEBUT DE LA SECTION PROGRAMME -->
+<section class="programme">
+  <div class="text_programme">
+    <h3 class="display-4">Le programme</h3>
+    <p>
+      CPI, c'est une école de formation en informatique d'excellence pour tous et toutes.<br>
+      Au programme de cette école différente et
+      innovante : une approche par la pratique <br> pour progresser et développer des compétences techniques et humaines recherchées <br> sur le marché du travail.
+  </p>
+  </div>
+</section>
+<!--  FIN DE LA SECTION PROGRAMME -->
+
+<!--  DEBUT DE LA SECTION CARDS -->
+<section class="icones">
+  <div class="container">
+    <div class="card">
+      <div class="card__icon">
+        <img src="https://i.imgur.com/93ei2SI.png" alt="icon.png" />
+      </div>
+      <h6>DIGITAL PRODUCTS</h6>
+      <ul>
+        <li>Digital Branding</li>
+        <li>Web & Mobile Sites</li>
+        <li>User Interface Design</li>
+        <li>Responsive Techs</li>
+      </ul>
+    </div>
+    <div class="card selected">
+      <div class="card__icon">
+        <img src="https://i.imgur.com/n31OoA5.png" alt="icon.png" />
+      </div>
+      <h6>UI-UX DESIGN</h6>
+      <ul>
+        <li>Digital Strategy</li>
+        <li>User Experience Design</li>
+        <li>User Interface Design</li>
+        <li>Mobile Sites</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="card__icon">
+        <img src="https://i.imgur.com/dbngiB3.png" alt="icon.png" />
+      </div>
+      <h6>WEB DEVELOPMENT</h6>
+      <ul>
+        <li>Custom Platform</li>
+        <li>Back-End Executions</li>
+        <li>Interface Apps</li>
+        <li>Mobile Systems</li>
+      </ul>
+    </div>
+     <div class="card">
+      <div class="card__icon">
+        <img src="https://i.imgur.com/dbngiB3.png" alt="icon.png" />
+      </div>
+      <h6>WEB DEVELOPMENT</h6>
+      <ul>
+        <li>Custom Platform</li>
+        <li>Back-End Executions</li>
+        <li>Interface Apps</li>
+        <li>Mobile Systems</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!--  FIN DE LA SECTION CARDS -->
 {% endblock %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Cards Hover Effect</title>
+    <!-- Google Fonts Link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- jQuery CDN Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card__icon">
+          <img src="https://i.imgur.com/93ei2SI.png" alt="icon.png" />
+        </div>
+        <h6>DIGITAL PRODUCTS</h6>
+        <ul>
+          <li>Digital Branding</li>
+          <li>Web & Mobile Sites</li>
+          <li>User Interface Design</li>
+          <li>Responsive Techs</li>
+        </ul>
+      </div>
+      <div class="card selected">
+        <div class="card__icon">
+          <img src="https://i.imgur.com/n31OoA5.png" alt="icon.png" />
+        </div>
+        <h6>UI-UX DESIGN</h6>
+        <ul>
+          <li>Digital Strategy</li>
+          <li>User Experience Design</li>
+          <li>User Interface Design</li>
+          <li>Mobile Sites</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card__icon">
+          <img src="https://i.imgur.com/dbngiB3.png" alt="icon.png" />
+        </div>
+        <h6>WEB DEVELOPMENT</h6>
+        <ul>
+          <li>Custom Platform</li>
+          <li>Back-End Executions</li>
+          <li>Interface Apps</li>
+          <li>Mobile Systems</li>
+        </ul>
+      </div>
+       <div class="card">
+        <div class="card__icon">
+          <img src="https://i.imgur.com/dbngiB3.png" alt="icon.png" />
+        </div>
+        <h6>WEB DEVELOPMENT</h6>
+        <ul>
+          <li>Custom Platform</li>
+          <li>Back-End Executions</li>
+          <li>Interface Apps</li>
+          <li>Mobile Systems</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+ </html>

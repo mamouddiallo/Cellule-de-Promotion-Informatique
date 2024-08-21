@@ -1,6 +1,6 @@
 body {
     margin:0;
-    font-family: calibri;
+    font-family: Roboto, sans-serif, Poppins;
   }
 .c {
     color: #e52328;
@@ -53,7 +53,9 @@ body {
       padding: 10px 20px 10px 20px;
       text-decoration: none;
   }
-  
+  .carouselslide{
+    width: 100%;
+  }
   /* menu */
   
   .header .menu {
@@ -148,88 +150,130 @@ body {
   }
 
 /* SECTION HERO OU LE DIRECTEUR PARLE AVEC SA PHOTO */
-.largeur{
-    width: 100%;
-    background-color: #1e2029;
+.hero{
+  background-color: #1e2029;
 }
-section {
-    /* padding: 100px; */
-    background-color: white;
-    border: 2px solid black;
-    margin: 200px;
-  }
-  .hero {
-    display: flex;
-    flex-direction: row;
-    justify-items: space-between;
-    width: 70%;
-    /* margin: auto; */
-  }
+.leader{
+  font-size:x-large;
+  color: white;
+  font-style: italic;
+  text-align: justify;
+}
+.small-image{
+  margin-top: 100px;
+  border-radius: 15px;
+}
+.display-4{
+  margin-top: -70px;
+  color: white;
+  font-style: oblique;
+  text-decoration: underline;
 
-  div {
-    margin-right: 40px;
-    padding-top: 0;
-  }
-  h1 {
-    color: #A5B4FC;
-    font-size: 3em;
-    padding-bottom: 25px;
-  }
-  p {
-    color: black;
-    font-size: 1.2em;
-    margin-bottom: 70px;
-    border: 2px solid green;
-    margin-left: 20px;
-  }
-  a {
-    text-decoration: none;
-    color: white;
-  }
-  a:hover {
-    text-decoration: none;
-  }
-  .cta {
-    color: white;
-    background: linear-gradient(#8E86B5, #ACAEED);
-    padding: 20px 30px;
-    font-size: 1.1em;
-    border-radius: 50px;
-  }
-  .cta:hover {
-    text-decoration: none;
-    background: linear-gradient(#696484, #8788BA);
-  }
-  @media screen and (max-width: 996px) {
-    .hero {
-       flex-direction: column;
-       text-align: center;
-       justify-content: center;
-       padding: 30px;
-       padding: 10px;
-       width: 85%;
-      }
-    .hero img {
-       order: 1;
-       margin-bottom: 40px;
-      }
-    .hero div {
-       order: 2;
-       height: auto;
-       margin-bottom: 15px;
-       margin-right: 0;
-      }
-    .home p {
-       padding: 0 50px 0 50px;
-       margin-bottom: 50px;
-      }
-  }
-  @media screen and (max-width: 470px) {
-    .hero h1 {
-       font-size: 2em;
-      }
-    .hero p {
-       font-size: 1.2em;
-      }
-  }
+}
+.small-image{
+  width: 90%;
+  border-radius: 7%;
+  padding: 10px 20px 10px 20px;
+}
 /* FIN DE LA SECTION HERO */
+
+/* DEBUT LE PROGRAMME */
+.programme{
+  background-color: #1e2029;
+  text-align: center;
+  color: white;
+  font-size:x-large;
+  width: 100%;
+  height: auto;
+  margin-top: -30px;
+
+}
+.text_programme{
+  height: 100px;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+}
+.text_programme p{
+  margin: 0 auto;
+  text-align: justify;
+}
+/* FIN DU PROGRAMME */
+.icones {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #222327;
+  font-family: "poppins", sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 305px;
+  margin: 25px;
+  padding: 40px 30px;
+  background-color: #222327;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+}
+
+.card .card__icon {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.card .card__icon img {
+  height: 75px;
+}
+
+.card h6 {
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.card ul li {
+  list-style: none;
+  padding: 3px 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.card.selected::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  right: -25px;
+  bottom: -30px;
+  background: url(https://i.imgur.com/WunqBPz.png);
+  background-position: right;
+  background-size: 10px;
+  z-index: -1;
+}
+
+.card.selected {
+  background-color: #161619;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+/* FIN LE PROGRAMME */
