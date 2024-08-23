@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div id="carouselExampleControls" class="carouselslide" data-bs-ride="carousel">
+
+  <div id="carouselExampleControls" class="carouselslide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="{% static 'images/medium-shot-women-working-together (1).jpg' %}" class="d-block w-100" alt="...">
@@ -32,10 +33,12 @@
       <div class="col-lg-6">
         <div class="p-5 mt-4">
             <h3 class="display-4">Mot du directeur</h3>
-            <p class="leader">Bienvenue à la <strong>Cellule de Promotion Informatique</strong> !
-              Notre centre offre des formations complètes en Microsoft, Sage, Infographie, ainsi que des qualifications en Caisse et Maintenance informatique et réseaux. Nos programmes sont conçus pour vous fournir des compétences pratiques et adaptées aux besoins du marché.
-              
-              Nos formateurs expérimentés vous préparent aux défis professionnels, tout en vous connectant à un réseau d'opportunités de stages et d'emplois.
+            <p class="leader">La <strong>Cellule de Promotion Informatique</strong>  est une structure spécialisée dans la formation et le renforcement des capacités de tous ceux ou celles qui désirent maîtriser et avoir une grande expertise dans le domaine de l’informatique et de l’Internet.
+              Elle dispose d’hommes et de matériels de qualité qui lui permettent d’offrir à tout moment des formations personnalisées.
+              C’est une structure qui a plus de 20 ans d’expérience et dont la rigueur et la pédagogie lui ont valu une renommée et un respect dans son domaine d’activité.
+              Notre objectif est de permettre à tous ceux et celles qui le souhaitent, de maîtriser les nouvelles technologies et d’avoir une grande connaissance dans les domaines de l’informatique et de l’Internet.
+              Désormais l’ordinateur et sa science informatique ont un nom : La Cellule de Promotion Informatique. 
+              Que Dieu vous bénisse !
                </p>
           
           </div>
@@ -61,119 +64,47 @@
   <div class="container">
     <div class="card">
       <div class="card__icon">
-        <img src="https://i.imgur.com/93ei2SI.png" alt="icon.png" />
+        <img src="{% static 'images/flexible.png' %}" alt="icon.png" />
       </div>
-      <h6>DIGITAL PRODUCTS</h6>
-      <ul>
-        <li>Digital Branding</li>
-        <li>Web & Mobile Sites</li>
-        <li>User Interface Design</li>
-        <li>Responsive Techs</li>
-      </ul>
+      <h6>Emplois du temps Flexible</h6>
     </div>
     <div class="card selected">
       <div class="card__icon">
-        <img src="https://i.imgur.com/n31OoA5.png" alt="icon.png" />
+        <img src="{% static 'images/training.png' %}" alt="icon.png" />
       </div>
-      <h6>UI-UX DESIGN</h6>
-      <ul>
-        <li>Digital Strategy</li>
-        <li>User Experience Design</li>
-        <li>User Interface Design</li>
-        <li>Mobile Sites</li>
-      </ul>
+      <h6>Formation en présentiel</h6>
+
     </div>
     <div class="card">
       <div class="card__icon">
-        <img src="https://i.imgur.com/dbngiB3.png" alt="icon.png" />
+        <img src="{% static 'images/pay.png' %}" alt="icon.png" />
       </div>
-      <h6>WEB DEVELOPMENT</h6>
-      <ul>
-        <li>Custom Platform</li>
-        <li>Back-End Executions</li>
-        <li>Interface Apps</li>
-        <li>Mobile Systems</li>
-      </ul>
+      <h6>Moyen de paiement Flexible</h6>
     </div>
      <div class="card">
       <div class="card__icon">
-        <img src="https://i.imgur.com/dbngiB3.png" alt="icon.png" />
+        <img src="{% static 'images/smartphone.png' %}" alt="icon.png" />
       </div>
-      <h6>WEB DEVELOPMENT</h6>
-      <ul>
-        <li>Custom Platform</li>
-        <li>Back-End Executions</li>
-        <li>Interface Apps</li>
-        <li>Mobile Systems</li>
-      </ul>
+      <h6>Formation certifiante</h6>
     </div>
   </div>
 </section>
 <!--  FIN DE LA SECTION CARDS -->
+<!-- DEBUT DE LA SECTION NOS VALEURS -->
+<section class="valeurs">
+  <div class="container_valeurs">
+    <div class="card1">
+      <img src="{% static 'images/coupler (1).png' %}" alt="icon.png" />
+      <h6>Accessible a tous</h6>
+  </div>
+  <div class="card1">
+    <img src="{% static 'images/sans-instruction (1).png' %}" alt="icon.png" />
+    <h6>Pas bésoin d'avoir <br> un diplôme</h6>
+  </div>
+  <div class="card1">
+    <img src="{% static 'images/cerveau.png' %}" alt="icon.png" />
+    <h6>Pas bésoin d'avoir <br> les bases</h6>
+  </div>
+ 
+</section>
 {% endblock %}
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jQuery Cards Hover Effect</title>
-    <!-- Google Fonts Link -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- jQuery CDN Link -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="card">
-        <div class="card__icon">
-          <img src="https://i.imgur.com/93ei2SI.png" alt="icon.png" />
-        </div>
-        <h6>DIGITAL PRODUCTS</h6>
-        <ul>
-          <li>Digital Branding</li>
-          <li>Web & Mobile Sites</li>
-          <li>User Interface Design</li>
-          <li>Responsive Techs</li>
-        </ul>
-      </div>
-      <div class="card selected">
-        <div class="card__icon">
-          <img src="https://i.imgur.com/n31OoA5.png" alt="icon.png" />
-        </div>
-        <h6>UI-UX DESIGN</h6>
-        <ul>
-          <li>Digital Strategy</li>
-          <li>User Experience Design</li>
-          <li>User Interface Design</li>
-          <li>Mobile Sites</li>
-        </ul>
-      </div>
-      <div class="card">
-        <div class="card__icon">
-          <img src="https://i.imgur.com/dbngiB3.png" alt="icon.png" />
-        </div>
-        <h6>WEB DEVELOPMENT</h6>
-        <ul>
-          <li>Custom Platform</li>
-          <li>Back-End Executions</li>
-          <li>Interface Apps</li>
-          <li>Mobile Systems</li>
-        </ul>
-      </div>
-       <div class="card">
-        <div class="card__icon">
-          <img src="https://i.imgur.com/dbngiB3.png" alt="icon.png" />
-        </div>
-        <h6>WEB DEVELOPMENT</h6>
-        <ul>
-          <li>Custom Platform</li>
-          <li>Back-End Executions</li>
-          <li>Interface Apps</li>
-          <li>Mobile Systems</li>
-        </ul>
-      </div>
-    </div>
-  </body>
- </html>

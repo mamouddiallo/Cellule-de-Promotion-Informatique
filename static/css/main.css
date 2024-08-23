@@ -20,17 +20,27 @@ body {
   .header {
       background-color: #fff;
       box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
-      position: fixed;
       width: 100%;
       z-index: 3;
+      position: fixed;
+  }
+  .carouselslide {
+    width: 100%;
+    height: auto; /* Ajuster automatiquement la hauteur */
+    margin: 0 auto; /* Centrer horizontalement */
   }
   
+  .carousel-item img {
+    width: 100%;
+    height: auto; /* Pour s'assurer que l'image s'adapte bien */
+  }
   .header ul {
       margin: 0;
       padding: 0;
       list-style: none;
       overflow: hidden;
       background-color: #fff;
+
   }
   
   .header li a {
@@ -53,9 +63,6 @@ body {
       padding: 10px 20px 10px 20px;
       text-decoration: none;
   }
-  .carouselslide{
-    width: 100%;
-  }
   /* menu */
   
   .header .menu {
@@ -71,7 +78,8 @@ body {
       display: inline-block;
       float: right;
       padding: 28px 20px;
-      position: relative;
+      position: absolute;
+      right: 20px;
       user-select: none;
   }
   
@@ -149,6 +157,7 @@ body {
       }
   }
 
+
 /* SECTION HERO OU LE DIRECTEUR PARLE AVEC SA PHOTO */
 .hero{
   background-color: #1e2029;
@@ -171,9 +180,10 @@ body {
 
 }
 .small-image{
-  width: 90%;
+  width: 100%;
   border-radius: 7%;
   padding: 10px 20px 10px 20px;
+  height: auto;
 }
 /* FIN DE LA SECTION HERO */
 
@@ -202,8 +212,7 @@ body {
 .icones {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  background-color: #222327;
+  background-color: #1e2029;
   font-family: "poppins", sans-serif;
   text-align: center;
   display: flex;
@@ -213,15 +222,15 @@ body {
 .container {
   padding: 40px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .card {
-  width: 305px;
+  width: 215px;
   margin: 25px;
-  padding: 40px 30px;
+  padding: 0px 0px;
   background-color: #222327;
   position: relative;
   transition: all 0.25s ease-in-out;
@@ -256,11 +265,11 @@ body {
 .card.selected::before {
   content: "";
   width: 50%;
-  height: 50%;
+  /* height: 50%; */
   position: absolute;
   right: -25px;
   bottom: -30px;
-  background: url(https://i.imgur.com/WunqBPz.png);
+  /* background: url(https://i.imgur.com/WunqBPz.png); */
   background-position: right;
   background-size: 10px;
   z-index: -1;
@@ -268,11 +277,33 @@ body {
 
 .card.selected {
   background-color: #161619;
-  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
+   /* Bordure blanche */
+  border: 1px solid #ffffff;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3); /* Ombre intense */
+}
+/* FIN DE SECTION NOTRE PROGRAMME */
+
+.container_valeurs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+  height: 200px;
+  box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5); /* Ombre intense */
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 
+.card__icon, img {
+  margin: 0 auto;
+  /* margin-bottom: 40px; */
+}
 
-
+.card__icon, img {
+  margin: 0 auto;
+  height: 75px;
+}
 
 
 
