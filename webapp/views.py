@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Formation
 
 # Create your views here.
 
@@ -6,7 +7,10 @@ def home(request, *args, **kwargs):
     """
     page accueil 
     """
-    context={}
+    formations = Formation.objects.all()
+    context={
+        'formations':formations
+    }
     
     return render(request, 'webapp/index.html', context)
 

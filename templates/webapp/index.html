@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-  <div id="carouselExampleControls" class="carouselslide" data-bs-ride="carousel">
+  <!-- <div id="carouselExampleControls" class="carouselslide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="{% static 'images/medium-shot-women-working-together (1).jpg' %}" class="d-block w-100" alt="...">
@@ -22,7 +22,17 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+  </div> -->
+<div class="banier_image">
+<div class="banier">
+  <div class="text_banier">
+    <h1>Maîtrisez <br>les Nouvelles  <br>Technologies <br> avec 20 Ans d'Expertise :</h1> <h4>Rejoignez la Cellule de Promotion Informatique</h4>
   </div>
+  <div class="picture_banier">
+    <img src="{% static 'images/18383.jpg' %}">
+  </div>
+</div>
+</div>
   <!--  DEBUT DE LA SECTION HERO -->
 <section class="hero">
   <div  class="container my-4">
@@ -51,9 +61,9 @@
   <div class="text_programme">
     <h3 class="display-4">Le programme</h3>
     <p>
-      CPI, c'est une école de formation en informatique d'excellence pour tous et toutes.<br>
-      Au programme de cette école différente et
-      innovante : une approche par la pratique <br> pour progresser et développer des compétences techniques et humaines recherchées <br> sur le marché du travail.
+      La <strong>Cellule de Promotion Informatique </strong> est un cabinet de formation qui prône <strong>l'excellence</strong> et valorise <strong>la formation pour tous </strong> à un <strong>tarif préferentiel</strong>.
+      Elle allie <strong>innovation</strong> et <strong>téchnologie</strong> pour permettre aux auditeurs d'apprendre et de maîtriser les outils modernes.
+
   </p>
   </div>
 </section>
@@ -105,6 +115,84 @@
     <img src="{% static 'images/cerveau.png' %}" alt="icon.png" />
     <h6>Pas bésoin d'avoir <br> les bases</h6>
   </div>
- 
+ <!-- FIN DE LA SECTION NOS VALEURS -->
 </section>
+<!-- DEBUT DE LA SECTION NOS FORMATIONS -->
+<section class="formations">
+  <div class="text_nos_formations">
+    <h3 class="display-4_texte">Nos formations certifiantes de la <strong>Cellule de Promotion Informatique</strong></h3>
+  </div>
+  <div class="les_formations">
+    <div class="row">
+      {% for formation in formations %}
+      <div class="col-lg-3">
+        <img src="{{ formation.image.url}}" alt="formation.png" />
+        <div class="box-elemen text">
+          <h6>{{ formation.name }}</h6>
+          <hr>
+          <p>
+            {{ formation.description }}
+          </p>
+          <button class="btn btn-outline-secondary">En savoir plus</button>
+        </div>
+      </div>
+      
+      {% endfor %}    
+    </div>
+  </div>
+</section>
+<section class="apprenantsretour">
+  <div class="text_nos_formations">
+    <h3 class="display-4_texte">Ce que disent nos apprenants de la <strong>Cellule de Promotion Informatique</strong></h3>
+  </div>
+</section>
+<section class="espace">
+
+</section>
+<!-- CE QUE DISENT NOS APPRENANTS -->
+<article>
+  <section class="cardarticle">
+    <div class="text-content">
+      <h3>Mamoudou Diallo</h3>
+      <p>"Les formations que j'ai suivies au Centre de Formation en Informatique, notamment en Word-Excel, développement web, et développement Windev, ont été enrichissantes. Les cours étaient bien structurés, et les instructeurs compétents. Je recommande ce centre à quiconque souhaite renforcer ses compétences en informatique."</p>  
+      <!-- <a href="#">Join now</a> -->
+    </div>
+    <div class="visual">
+      <img src="{% static 'images/Mamoud1.jpg' %}" alt="" />
+    </div>
+  </section> 
+
+  <section class="cardarticle">
+    <div class="text-content">
+      <h3>Responsive Design for Every Screen Size</h3>
+      <p>We specialize in creating responsive designs that look great on desktop, tablet, and mobile devices, ensuring your site is accessible to all your visitors.</p>  
+      <a href="#">Join now</a>
+    </div>
+    <div class="visual">
+      <img src="https://images.unsplash.com/photo-1564460576398-ef55d99548b2?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
+    </div>
+  </section> 
+
+  <section class="cardarticle">
+    <div class="text-content">
+      <h3>Design that Speaks to Your Audience</h3>
+      <p>We work closely with you to understand your brand and your customers, so we can create a website that speaks directly to your target audience.</p>  
+      <a href="#">Join now</a>
+    </div>
+    <div class="visual">
+      <img src="https://images.unsplash.com/photo-1631085274261-0ace0296eaa0?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMTExMDg&ixlib=rb-4.0.3&q=80" alt="" />
+    </div>
+  </section>  
+</article>
+<section class="Information_localisation">
+   <div class="localisation">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.4741063424262!2d-4.078477711145039!3d5.344361600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1c1e6f8663eed%3A0x2b36d5bb21ddd619!2sChantier%20Cathedrale%20Saint%20Andr%C3%A9%20Yopougon!5e0!3m2!1sfr!2sci!4v1725309389795!5m2!1sfr!2sci" width="600" height="450" style="border:0;" allowfullscreen="true" 
+    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   </div>
+</section>
+<!-- FIN DE LA SECTION NOS FORMATIONS -->
+
+<!-- DEBUT FOOTER -->
+
+
 {% endblock %}
