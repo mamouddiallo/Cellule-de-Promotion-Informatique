@@ -43,13 +43,9 @@
       <div class="col-lg-6">
         <div class="p-5 mt-4">
             <h3 class="display-4">Mot du directeur</h3>
-            <p class="leader">La <strong>Cellule de Promotion Informatique</strong>  est une structure spécialisée dans la formation et le renforcement des capacités de tous ceux ou celles qui désirent maîtriser et avoir une grande expertise dans le domaine de l’informatique et de l’Internet.
-              Elle dispose d’hommes et de matériels de qualité qui lui permettent d’offrir à tout moment des formations personnalisées.
-              C’est une structure qui a plus de 20 ans d’expérience et dont la rigueur et la pédagogie lui ont valu une renommée et un respect dans son domaine d’activité.
-              Notre objectif est de permettre à tous ceux et celles qui le souhaitent, de maîtriser les nouvelles technologies et d’avoir une grande connaissance dans les domaines de l’informatique et de l’Internet.
-              Désormais l’ordinateur et sa science informatique ont un nom : La Cellule de Promotion Informatique. 
-              Que Dieu vous bénisse !
-               </p>
+            <p class="leader">La Cellule de Promotion Informatique est spécialisée dans la formation et le renforcement des compétences en informatique et Internet. Forte de plus de 20 ans d'expérience, 
+              elle offre des formations personnalisées avec des experts et des équipements de qualité. Notre objectif est d'aider chacun à maîtriser les nouvelles technologies et à exceller en informatique.
+              La Cellule de Promotion Informatique, un nom reconnu dans le domaine. Que Dieu vous bénisse !</p>
           
           </div>
       </div>
@@ -130,9 +126,7 @@
         <div class="box-elemen text">
           <h6>{{ formation.name }}</h6>
           <hr>
-          <p>
-            {{ formation.description }}
-          </p>
+          <p>{{formation.description}}</p>
           <button class="btn btn-outline-secondary">En savoir plus</button>
         </div>
       </div>
@@ -154,7 +148,7 @@
   <section class="cardarticle">
     <div class="text-content">
       <h3>Mamoudou Diallo</h3>
-      <p>"Les formations que j'ai suivies au Centre de Formation en Informatique, notamment en Word-Excel, développement web, et développement Windev, ont été enrichissantes. Les cours étaient bien structurés, et les instructeurs compétents. Je recommande ce centre à quiconque souhaite renforcer ses compétences en informatique."</p>  
+      <p>"Les formations que j'ai suivies à la <strong>Cellule de Promotion Informatique</strong>, notamment en <strong>Word-Excel</strong>, <strong>développement web</strong>, et <strong>développement Windev</strong>, ont été enrichissantes. Les cours étaient bien structurés, et les instructeurs compétents. Je recommande ce centre à quiconque souhaite renforcer ses compétences en informatique."</p>  
       <!-- <a href="#">Join now</a> -->
     </div>
     <div class="visual">
@@ -164,26 +158,27 @@
 
   <section class="cardarticle">
     <div class="text-content">
-      <h3>Responsive Design for Every Screen Size</h3>
-      <p>We specialize in creating responsive designs that look great on desktop, tablet, and mobile devices, ensuring your site is accessible to all your visitors.</p>  
-      <a href="#">Join now</a>
+      <h3><strong>Justine N'guessan </strong> </h3>
+      <h6>Caissière au Dispensaire Diocésain Sœur Catherine</h6>
+      <p>"La formation en caissière spécialisée à la Cellule de Promotion Informatique m'a donné les compétences essentielles pour gérer efficacement les transactions et les outils de caisse. Elle m'a aussi aidé à améliorer mon service client, ce qui a fait toute la différence dans mon travail actuel. Je recommande vivement cette formation."</p>  
     </div>
     <div class="visual">
-      <img src="https://images.unsplash.com/photo-1564460576398-ef55d99548b2?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMDU1NDY&ixlib=rb-4.0.3&q=80" alt="" />
+      <img src="{% static 'images/NGUESSAN.jpg' %}" alt="" />
     </div>
   </section> 
 
   <section class="cardarticle">
     <div class="text-content">
-      <h3>Design that Speaks to Your Audience</h3>
-      <p>We work closely with you to understand your brand and your customers, so we can create a website that speaks directly to your target audience.</p>  
-      <a href="#">Join now</a>
+      <h3><strong>Gbaha Christelle </strong></h3>
+      <h6> stagiaire au supermarché Proxy market Yopougon</h6>
+      <p>"La formation en caissière spécialisée à la Cellule de Promotion Informatique m'a donné les compétences nécessaires pour gérer les transactions et outils de caisse au supermarché Proxy Market, Yopougon. Elle a aussi amélioré mon service client, un atout dans mon stage actuel. Je recommande cette formation."</p>  
     </div>
     <div class="visual">
-      <img src="https://images.unsplash.com/photo-1631085274261-0ace0296eaa0?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzgzMTExMDg&ixlib=rb-4.0.3&q=80" alt="" />
+      <img src="{% static 'images/CRISTELLE.jpg' %}" alt="" />
     </div>
   </section>  
 </article>
+
 <section class="Information_localisation">
    <div class="localisation">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.4741063424262!2d-4.078477711145039!3d5.344361600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1c1e6f8663eed%3A0x2b36d5bb21ddd619!2sChantier%20Cathedrale%20Saint%20Andr%C3%A9%20Yopougon!5e0!3m2!1sfr!2sci!4v1725309389795!5m2!1sfr!2sci" width="600" height="450" style="border:0;" allowfullscreen="true" 
@@ -193,6 +188,5 @@
 <!-- FIN DE LA SECTION NOS FORMATIONS -->
 
 <!-- DEBUT FOOTER -->
-
-
+ 
 {% endblock %}

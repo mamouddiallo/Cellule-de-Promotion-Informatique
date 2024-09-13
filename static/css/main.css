@@ -1,5 +1,5 @@
 body {
-    margin:0;
+    margin:0 auto;
     font-family: Roboto, sans-serif, Poppins;
   }
 .c {
@@ -197,6 +197,46 @@ body {
   height: auto;
   border-radius: 15px;
 }
+/* MEDIA QUERRY DE IMAGE ET TEXTE */
+@media only screen and (max-width: 767px) {
+  .banier_image {
+    /* margin-top: 50px; */
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+    background-image: url("../images/fond-monochrome-blanc-style-papier.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .banier {
+    width: 100%; /* Prend toute la largeur disponible */
+    flex-direction: column; /* Passe en colonne pour éviter un affichage trop serré */
+    justify-content: center;
+    align-items: center; /* Centre les éléments */
+  }
+
+  .text_banier {
+    margin-top: 20px; /* Réduit l'espacement supérieur */
+    text-align: center; /* Centre le texte sur les petits écrans */
+  }
+
+  .text_banier h1 {
+    font-size: 28px; /* Réduit la taille de la police pour mieux s'adapter aux petits écrans */
+    text-align: justify;
+  }
+
+  .picture_banier {
+    width: 80%; /* Ajuste la largeur de l'image pour éviter qu'elle prenne trop de place */
+    margin-top: 20px; /* Réduit l'espacement supérieur */
+  }
+
+  .picture_banier img {
+    border-radius: 10px; /* Réduit le rayon du coin arrondi */
+  }
+}
+
 /* SECTION HERO OU LE DIRECTEUR PARLE AVEC SA PHOTO */
 .hero{
   background-color: #1e2029;
@@ -224,6 +264,7 @@ body {
   padding: 10px 20px 10px 20px;
   height: auto;
 }
+
 /* FIN DE LA SECTION HERO */
 
 /* DEBUT LE PROGRAMME */
@@ -368,7 +409,6 @@ body {
 }
 
 .col-lg-3 {
-  width: 10%; /* Réduction de la largeur */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -405,7 +445,8 @@ body {
   margin-top: 10px;
 }
 .box-elemen p{
-  text-align: justify;
+  text-align: center;
+
 }
 
 
@@ -423,6 +464,14 @@ body {
 .espace{
   width: 100%;
   height: 50px;
+}
+article {
+  margin-top: 20px;
+  margin:auto;
+  display:block;
+  width:calc(60vw + 248px);
+  max-width:calc(920px + 248px);
+  min-width:calc(640px + 248px); 
 }
 section.cardarticle {
   margin-top: 250px;
@@ -452,8 +501,8 @@ section.cardarticle {
     }
     p {
       margin:16px 0 24px;
-      max-width:36ch;
       text-align: justify;
+      word-spacing: -1px; /* Réduit légèrement l'espacement entre les mots */
     }
     a {
       border:3px solid #000;
@@ -499,15 +548,8 @@ section.cardarticle {
 
 }
 
-article {
-  margin-top: 20px;
-  margin:auto;
-  display:block;
-  width:calc(60vw + 248px);
-  max-width:calc(920px + 248px);
-  min-width:calc(640px + 248px); 
-}
 
+/* TOUT VA SE PASSER ICI */
 @media all and (max-width:1100px) {
   body {
     padding:96px 48px 24px
@@ -515,7 +557,9 @@ article {
   article {
     width:100%;
     max-width:100%;
-    min-width:100%
+    min-width:100%;
+    margin: 0 auto;
+    /* display: none; */
   }
   section.card {
     width:100%;
@@ -524,8 +568,19 @@ article {
     .text-content {
       width:100%
     }
-    &:nth-of-type(odd) {
-      margin:0
+    /* &:nth-of-type(odd) {
+      margin:0 auto;
+    } */
+  }
+  &:nth-of-type(odd) {
+    border-radius:24px 24px 48px 24px;
+    padding:48px 308px 48px 60px;
+    .visual {
+      right:24px;
+      left:auto
+    }
+    .text-content a {
+      align-self:flex-start
     }
   }
 }
@@ -580,6 +635,7 @@ html {
   margin: 0 auto;
   margin-top: 20px;
   border-radius:24px 24px 24px 48px;
+  margin-bottom: 20px;
  
 }
 .localisation iframe{
@@ -605,8 +661,11 @@ body{
 .main-footer {
   padding: 70px 0;
   display: flex;
-  justify-content: space-evenly;
-  background-color: #19302E;
+  /* justify-content: space-evenly; */
+  justify-content: space-between;
+  background-color: #000000;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .main-footer ul {
@@ -632,12 +691,14 @@ body{
 }
 
 footer {
-  background-color: #19302E;
-  border-top: 1px solid #6EB981;
+  background-color: #000000;
+  border-top: 2px solid white ;
   font-size: 17px;
   padding: 15px 5px;
   color: #ffffff;
   text-align: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 footer a {
@@ -649,10 +710,12 @@ footer a {
   color: #6EB981;
   font-size: 17px;
   margin-top: 5px;
+  text-align: justify;
 }
 
 .contact-details {
   margin-top: 20px;
+  text-align: left;
 }
 
 .contact-details li {
@@ -683,6 +746,11 @@ footer a {
 
 .com ul li{
   padding:5px 0;
+  text-align: left;
+}
+.linkedin img{
+  width: 40px;
+  height: 40px;
 }
 
 @media only screen and (max-width: 749px) {
