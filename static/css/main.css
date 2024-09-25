@@ -13,129 +13,72 @@ body {
 }
 /* ORDINATEUR */
 @media screen and (min-width: 1024px){
-    /* header */
-    .logo {
-      color:black;
-      display:inline-lock;
-      margin-top: 20px;
-    }
-    .header {
-      margin-top: 100pxs;
-      background-color:white;
-      box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-      width: 100%;
-      /* height: 100px; */
-      z-index: 1000; /* Augmente le z-index pour s'assurer que le header reste au-dessus */
-      position: absolute;
-      top: 0;
-      left: 0;
+  /* header */
+ /* Container */
+ .container{
+  width: 85%;
+  margin: 0 auto; /* Centrer la div container */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  }
-    
-    .header ul {
-        height: auto;
-        padding: 0;
-        list-style: none;
-        overflow: hidden;
-        background-color: #fff;
-        margin-top: -23px;
-  
-    }
-    
-    .header li a {
-        display: block;
-        text-decoration: none;
-        color: black;
-        font-weight: 600;
-    }
-    
-    .header li a:hover,
-    .header .menu-btn:hover {
-        background-color: #f4f4f4;
-    }
-    
-    .header .logo {
-        display: block;
-        float: left;
-        font-size: 2em;
-        /* padding: 10px 20px 10px 20px; */
-        text-decoration: none;
-    }
-    /* menu */
-    
-    .header .menu {
-        clear: both;
-        max-height: 0;
-        transition: max-height .2s ease-out;
-    }
-    
-    /* menu icon */
-    
-    .header .menu-icon {
-        cursor: pointer;
-        display: inline-block;
-        float: right;
-        /* padding: 28px 20px; */
-        position: absolute;
-        right: 20px;
-        user-select: none;
-        margin-top: 20px;
-    }
-    
-    .header .menu-icon .navicon {
-        background: #333;
-        display: block;
-        height: 2px;
-        position: relative;
-        transition: background .2s ease-out;
-        width: 18px;
-    }
-    
-    .header .menu-icon .navicon:before,
-    .header .menu-icon .navicon:after {
-        background: #333;
-        content: '';
-        display: block;
-        height: 100%;
-        position: absolute;
-        transition: all .2s ease-out;
-        width: 100%;
-    }
-    
-    .header .menu-icon .navicon:before {
-        top: 5px;
-    }
-    
-    .header .menu-icon .navicon:after {
-        top: -5px;
-    }
-    
-    /* menu btn */
-    
-    .header .menu-btn {
-        display: none;
-    }
-    
-    .header .menu-btn:checked ~ .menu {
-        max-height: 240px;
-    }
-    
-    .header .menu-btn:checked ~ .menu-icon .navicon {
-        background: transparent;
-    }
-    
-    .header .menu-btn:checked ~ .menu-icon .navicon:before {
-        transform: rotate(-45deg);
-    }
-    
-    .header .menu-btn:checked ~ .menu-icon .navicon:after {
-        transform: rotate(45deg);
-    }
-    
-    .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-    .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-        top: 0;
-    }
+/* Logo */
+.logo {
+  margin-top: -20px;
+  font-size: 2em;
+  list-style: none;
+}
+a img{
+  text-decoration: none;
+  width: 60px;
+}
+.header {
+  background-color:white;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+  width: 100%;
+  height: 100px;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Menu */
+.header .menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header .menu li {
+  margin-left: 20px;
+}
+
+.header li a {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-weight: 600;
+  padding: 10px 15px;
+  display: block;
+}
+
+.header li a:hover {
+  background-color: #f4f4f4;
+}
+
+/* Menu icon (hamburger) for smaller screens */
+.header .menu-icon {
+  cursor: pointer;
+  display: none; /* Caché sur les grands écrans */
+}
+
+.header .menu-btn {
+  display: none; /* Caché sur les grands écrans */
+}
+
 
       /* LA BANIERE */
     .banier_image{
@@ -177,6 +120,11 @@ body {
       /* SECTION HERO OU LE DIRECTEUR PARLE AVEC SA PHOTO */
       .hero{
         background-color: #1e2029;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+
         }
         .leader{
         font-size:x-large;
@@ -196,11 +144,18 @@ body {
     
         }
         .small-image{
-        width: 100%;
-        border-radius: 7%;
-        padding: 10px 20px 10px 20px;
-        height: auto;
+          width: 100%;
+          border-radius: 7%;
+          padding: 10px 20px;
+          height: auto;
+          /* Ajustements pour fusionner avec le fond */
+          opacity: 0.95; /* Réduit légèrement l'opacité pour adoucir l'apparence */
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce pour mieux s'intégrer */
+          transition: opacity 0.3s ease; /* Douce transition pour l'image */
         }
+        .small-image:hover {
+          opacity: 1; /* Rétablit l'opacité complète au survol */
+      }
     
     /* FIN DE LA SECTION HERO */
         /* DEBUT LE PROGRAMME */
@@ -312,12 +267,12 @@ body {
     padding: 20px;
     border-radius: 10px;
   }
+  .card1 img{
+    width: 100%;
+  }
 
 /* DEBUT DE L'ARTICLE */
-.apprenantsretour{
-  width: 100%;
-  height: auto;
-}
+
 .text_nos_formations h3{
   margin-top: 20px;
 }
@@ -325,13 +280,10 @@ body {
   width: 100%;
   height: 50px;
 }
-article {
-  margin-top: 20px;
-  margin:auto;
-  display:block;
-  width:calc(60vw + 248px);
-  max-width:calc(920px + 248px);
-  min-width:calc(640px + 248px); 
+.apprenantsretour{
+  margin-top: 10px;
+  width: 80%;
+  margin: 0 auto;
 }
 section.cardarticle {
   margin-top: 250px;
@@ -610,16 +562,19 @@ section.cardarticle {
 
 /* SMARTHPHONE */
 @media screen and (max-width: 767px) {
-  .logo {
-    color:black;
-    display:inline-lock;
-    margin-top: 20px;
+  .container{
+    width: 85%;
+    margin: 0 auto; /* Centrer la div container */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   .header {
     /* margin-top: 100pxs; */
     background-color:white;
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
     width: 100%;
+    margin: 0 auto;
     /* height: 100px; */
     z-index: 1000; /* Augmente le z-index pour s'assurer que le header reste au-dessus */
     position: relative;
@@ -627,14 +582,18 @@ section.cardarticle {
     left: 0;
 
 }
-  
+a img{
+  text-decoration: none;
+  width: 60px;
+  margin-left: -50px;
+}
   .header ul {
       height: auto;
       padding: 0;
       list-style: none;
       overflow: hidden;
       background-color: #fff;
-      margin-top: -23px;
+  
 
   }
   
@@ -741,6 +700,7 @@ section.cardarticle {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0 auto;
   }
 
   .banier {
@@ -749,42 +709,58 @@ section.cardarticle {
     justify-content: center;
     align-items: center; /* Centre les éléments */
     height: auto;
+    margin-top: -20px;
   }
 
   .text_banier {
-    margin-top: 20px; /* Réduit l'espacement supérieur */
+    
     text-align: center; /* Centre le texte sur les petits écrans */
+    width: 80%;
+    margin: 0 auto;
   }
 
   .text_banier h1 {
+    margin-top: 20px; /* Réduit l'espacement supérieur */
     font-size: 22px; /* Réduit la taille de la police pour mieux s'adapter aux petits écrans */
-    text-align: justify;
+    text-align: left;
+    padding-top: 10px;
   }
   .text_banier h4 {
     font-size: 13px; /* Réduit la taille de la police pour mieux s'adapter aux petits écrans */
-    text-align: justify;
+    text-align: left;
+    margin-top: -10px;
   }
 
   .picture_banier {
-    width: 100%; /* Ajuste la largeur de l'image pour éviter qu'elle prenne trop de place */
+    width: 80%; /* Ajuste la largeur de l'image pour éviter qu'elle prenne trop de place */
     margin-top: 20px; /* Réduit l'espacement supérieur */
+    margin: 0 auto;
   }
 
     .picture_banier img {
       width: 100%;
       height: auto;
+      margin: 0 auto;
     }
 
     /* SECTION HERO OU LE DIRECTEUR PARLE AVEC SA PHOTO */
+    .row{
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
     .hero{
       height: auto;
       background-color: #1e2029;
       }
   
       .small-image{
-        margin-top: 10px;
+      margin-top: 10px;
       border-radius: 15px;
-      width: 100%;
+      width: 80%;
+      display: flex;
+      margin: 0 auto;
       }
       .display-4{
       color: white;
@@ -799,15 +775,16 @@ section.cardarticle {
       .small-image{
       width: 100%;
       border-radius: 7%;
-      padding: 10px 20px 10px 20px;
+      /* padding: 10px 20px 10px 20px; */
       height: auto;
+      margin: 0 auto;
       }
       .leader{
         font-size:18px;
         color: white;
         font-style: italic;
         width: 100%;
-        text-align: center;
+        text-align: left;
         word-spacing: normal;
         padding: 10px;
         }
@@ -815,7 +792,8 @@ section.cardarticle {
 /* DEBUT ICONES */
 
 .icones {
-  margin: 0;
+  margin: 0 auto;
+  width: 100%;
   padding: 0;
   background-color: #1e2029;
   font-family: "poppins", sans-serif;
@@ -825,6 +803,8 @@ section.cardarticle {
   justify-content: center;
 }
 .container {
+  width: 80%;
+  margin: 0 auto;
   padding: 40px;
   display: flex;
   flex-direction: row;
@@ -896,12 +876,11 @@ section.cardarticle {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
   text-align: center;
   height: auto;
   box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5); /* Ombre intense */
   margin: 0 auto;
-  padding: 20px;
   border-radius: 10px;
 }
 /* FIN NOS VALEURS */
@@ -941,12 +920,18 @@ section.cardarticle {
     text-align: left; 
     margin: 0 auto;
     font-size: 22px;
+    width: 80%;
     
   }
 
 /* TEMOIGNAGES DE NOS ETUDIANTS */
-
+.apprenantsretour{
+  margin-top: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
 section.cardarticle {
+  width: 100%;
   text-align: center;
   margin: 0 auto;
   margin-top: 20px;
@@ -954,7 +939,8 @@ section.cardarticle {
   border-radius:24px 24px 24px 48px;
   display:flex;
   flex-direction:column;
-  position:relative;
+  justify-content: space-between;
+  justify-items: center;
   margin-bottom: 25px;
   box-shadow:
     5px 0 0 0 fade(#ccc,30%),
@@ -1005,8 +991,6 @@ section.cardarticle {
   &:nth-of-type(odd) {
     margin:0px;
     border-radius:24px 24px 48px 24px;
-    .visual {
-    }
     .text-content {
       text-align: center;
     }
