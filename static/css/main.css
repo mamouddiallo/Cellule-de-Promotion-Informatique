@@ -1,16 +1,9 @@
 body {
     margin:0 auto;
     font-family: Roboto, sans-serif, Poppins;
+    
   }
-.c {
-    color: #e52328;
-}
-.p {
-    color: #006023;
-}
-.i {
-    color: #0077a2;
-}
+
 /* ORDINATEUR */
 @media screen and (min-width: 1024px){
   /* header */
@@ -667,9 +660,14 @@ section.cardarticle {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
-  
-  
           }
+
+      .display-4{
+        color: white;
+        font-style: oblique;
+        text-decoration: underline;
+        text-align: center;
+        }
           .leader{
           font-size:x-large;
           color: white;
@@ -896,138 +894,199 @@ section.cardarticle {
     }
   
   }
-        /*  DEBUT SECTION LOCALISATION */
-    .Information_localisation{
-      width: 80%;
-      height: 300px;
-      border: 1px solid transparent;
-      margin: 0 auto;
-      margin-top: 20px;
-      border-radius:24px 24px 24px 48px;
-      margin-bottom: 20px;
-    
-    }
-    .localisation iframe{
-      width: 100%;
-      height: 300px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    /* FIN SECTION LOCALISATION */
-  
-    /* DEBUT FOOTER */
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
-  
-      *{
-        margin:0;
-        padding:0;
-        box-sizing:border-box;
-      }
-  
-      body{
-        font-family: 'Montserrat', sans-serif;
-      }
-  
-      .main-footer {
-        padding: 70px 0;
-        display: flex;
-        /* justify-content: space-evenly; */
-        justify-content: space-between;
-        background-color: #000000;
-        width: 80%;
-        margin: 0 auto;
-      }
-  
-      .main-footer ul {
-        list-style: none;
-      }
-  
-      .main-footer h1 {
-        font-size: 22px;
-        line-height: 117%;
-        color: #ffffff;
-        margin-bottom: 10px;
-        font-weight: 500;
-      }
-  
-      .main-footer h2 {
-        color: #ffffff;
-        font-weight: 500;
-      }
-  
-      .main-footer ul li a {
-        color: #ffffffcc;
-        text-decoration:none;
-      }
-  
-      /* DEBUT FOOTER  */
 
-      footer {
-        background-color: #000000;
-        border-top: 2px solid white ;
-        font-size: 17px;
-        padding: 15px 5px;
-        color: #ffffff;
-        text-align: center;
-        width: 100%;
+  .container_valeurs{
+  
+    width: 80%;
+   
+
+    /* DEBUT DE LA SECTION NOS FORMATIONS */
+    .formations{
+      width: 80%;
+      height: auto;
+      margin:  0 auto;
+      margin-top: 15px;
+    }
+    .display-4_texte{
+      text-align: center;
+      hyphens: auto;
+      margin: 0 auto;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+    }
+  
+    .col-lg-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      padding: 20px;
+      background-color: #fff;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .col-lg-3:hover {
+      transform: scale(1.05);
+    }
+  
+    .col-lg-3 img {
+      max-width: 80px; /* Taille de l'image réduite */
+      margin-bottom: 15px;
+    }
+  
+    .box-elemen h6 {
+      margin-top: 10px;
+      font-size: 16px; /* Taille du texte réduite */
+      color: #333;
+    }
+  
+    .box-elemen hr {
+      width: 50%;
+      margin: 10px auto;
+      border-color: #ddd;
+    }
+  
+    .box-elemen .btn {
+      margin-top: 10px;
+    }
+    .box-elemen p{
+      text-align: justify;
+      hyphens: auto;
+  
+    }
+}
+
+      /*  DEBUT SECTION LOCALISATION */
+      .Information_localisation{
+        width: 80%;
+        height: 300px;
+        border: 1px solid transparent;
         margin: 0 auto;
-      }
-  
-      footer a {
-        text-decoration: none;
-        color: #ffffff;
-      }
-  
-      .logoinfo p {
-        color: #6EB981;
-        font-size: 17px;
-        margin-top: 5px;
-      }
-  
-      .contact-details {
         margin-top: 20px;
-        text-align: center;
-      }
-  
-      .contact-details li {
-        list-style: none;
-        margin: 10px 0;
-      }
-  
-      .contact-details li a {
-        text-decoration:none;
-        color: #f1f1f1;
-      }
-  
-      .contact-details .fa {
-        color: #f1f1f1;
-        margin-right: 10px;
-      }
-  
-      .sociallogos{
-        padding:20px 0;
-      }
-  
-      .sociallogos .logobox a{
-        padding:0 10px;
-        text-decoration:none;
-        color:#ffffff;
-        font-size:22px;
-      }
-      .com h1{
-        text-align: center;
-      }
-      .com li{
-        padding:5px 0;
-        display: inline;
-        list-style: none;
-        margin: 0 auto;
+        border-radius:24px 24px 24px 48px;
+        margin-bottom: 20px;
       
       }
-      .linkedin img{
-        width: 30px;
-        height: 30px;
+      .localisation iframe{
+        width: 100%;
+        height: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
-      /* FIN FOOTER */
+      /* FIN SECTION LOCALISATION */
+    
+      /* DEBUT FOOTER */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    
+        *{
+          margin:0;
+          padding:0;
+          box-sizing:border-box;
+        }
+    
+        body{
+          font-family: 'Montserrat', sans-serif;
+        }
+    
+        .main-footer {
+          padding: 70px 0;
+          display: flex;
+          /* justify-content: space-evenly; */
+          justify-content: space-between;
+          background-color: #000000;
+          width: 80%;
+          margin: 0 auto;
+        }
+    
+        .main-footer ul {
+          list-style: none;
+        }
+    
+        .main-footer h1 {
+          font-size: 22px;
+          line-height: 117%;
+          color: #ffffff;
+          margin-bottom: 10px;
+          font-weight: 500;
+        }
+    
+        .main-footer h2 {
+          color: #ffffff;
+          font-weight: 500;
+        }
+    
+        .main-footer ul li a {
+          color: #ffffffcc;
+          text-decoration:none;
+        }
+    
+        footer {
+          background-color: #000000;
+          border-top: 2px solid white ;
+          font-size: 17px;
+          padding: 15px 5px;
+          color: #ffffff;
+          text-align: center;
+          width: 100%;
+          margin: 0 auto;
+        }
+    
+        footer a {
+          text-decoration: none;
+          color: #ffffff;
+        }
+    
+        .logoinfo p {
+          color: #6EB981;
+          font-size: 17px;
+          margin-top: 5px;
+          text-align: justify;
+        }
+    
+        .contact-details {
+          margin-top: 20px;
+          text-align: left;
+        }
+    
+        .contact-details li {
+          list-style: none;
+          margin: 10px 0;
+        }
+    
+        .contact-details li a {
+          text-decoration:none;
+          color: #f1f1f1;
+        }
+    
+        .contact-details .fa {
+          color: #f1f1f1;
+          margin-right: 10px;
+        }
+    
+        .sociallogos{
+          padding:20px 0;
+        }
+    
+        .sociallogos .logobox a{
+          padding:0 10px;
+          text-decoration:none;
+          color:#ffffff;
+          font-size:22px;
+        }
+    
+        .com ul li{
+          padding:5px 0;
+          text-align: left;
+        }
+        .linkedin img{
+          width: 40px;
+          height: 40px;
+        }
+
 }
 /* SMARTHPHONE */
 @media screen and (max-width: 767px) {
@@ -1215,6 +1274,9 @@ a img{
     }
 
     /* SECTION HERO OU LE DIRECTEUR PARLE AVEC SA PHOTO */
+   .hero .container{
+      width: 100%;
+    }
     .row{
       margin: 0 auto;
       display: flex;
@@ -1240,8 +1302,6 @@ a img{
       text-decoration: underline;
       font-size: 22px;
       text-align: center;
-   
-  
       }
      
       .small-image{
@@ -1256,9 +1316,9 @@ a img{
         color: white;
         font-style: italic;
         width: 100%;
-        text-align: left;
+        text-align: justify;
         word-spacing: normal;
-        padding: 10px;
+        hyphens: auto;
         }
   /* FIN DE LA SECTION HERO */
 /* DEBUT ICONES */
@@ -1273,6 +1333,7 @@ a img{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -20px;
 }
 .container {
   width: 80%;
@@ -1372,15 +1433,16 @@ a img{
     width: 70%;
     margin: 0 auto;
     height: auto;
+
   }
   .text_programme p{
     font-size:18px;
     color: white;
     font-style: italic;
     width: 100%;
-    text-align: center;
+    text-align: justify;
     word-spacing: normal;
-    padding: 10px;
+    hyphens: auto;
   }
 
   /* FIN DU PROGRAMME  */
@@ -1391,11 +1453,69 @@ a img{
   .display-4_texte{
     text-align: left; 
     margin: 0 auto;
-    font-size: 22px;
-    width: 80%;
+    font-size: 18px;
+    width: 100%;
     
   }
+   /* DEBUT DE LA SECTION NOS FORMATIONS */
+   .formations{
+    width: 80%;
+    height: auto;
+    margin:  0 auto;
+    margin-top: 15px;
+  }
+  .display-4_texte{
+    text-align: center;
+    hyphens: auto;
+    margin: 0 auto;
+  }
+  .row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+  }
 
+  .col-lg-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .col-lg-3:hover {
+    transform: scale(1.05);
+  }
+
+  .col-lg-3 img {
+    max-width: 80px; /* Taille de l'image réduite */
+    margin-bottom: 15px;
+  }
+
+  .box-elemen h6 {
+    margin-top: 10px;
+    font-size: 16px; /* Taille du texte réduite */
+    color: #333;
+  }
+
+  .box-elemen hr {
+    width: 50%;
+    margin: 10px auto;
+    border-color: #ddd;
+  }
+
+  .box-elemen .btn {
+    margin-top: 10px;
+  }
+  .box-elemen p{
+    text-align: justify;
+    hyphens: auto;
+
+  }
 /* TEMOIGNAGES DE NOS ETUDIANTS */
 .apprenantsretour{
   margin-top: 10px;
@@ -1432,6 +1552,7 @@ section.cardarticle {
     p {
       padding: 25px;
       text-align: justify;
+      hyphens: auto;
     }
     a {
       border:3px solid #000;
