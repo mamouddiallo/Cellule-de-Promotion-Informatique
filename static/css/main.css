@@ -557,9 +557,478 @@ section.cardarticle {
 
 /* #######TABLETTE############# */
 @media screen and (min-width: 767px){
+    /* header */
+   /* Container */
+   .container{
+    width: 85%;
+    margin: 0 auto; /* Centrer la div container */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo */
+  .logo {
+    margin-top: -20px;
+    font-size: 2em;
+    list-style: none;
+  }
+  a img{
+    text-decoration: none;
+    width: 60px;
+  }
+  .header {
+    background-color:white;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 100px;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Menu */
+  .header .menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header .menu li {
+    margin-left: 20px;
+  }
+  
+  .header li a {
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-weight: 600;
+    padding: 10px 15px;
+    display: block;
+  }
+  
+  .header li a:hover {
+    background-color: #f4f4f4;
+  }
+  
+  /* Menu icon (hamburger) for smaller screens */
+  .header .menu-icon {
+    cursor: pointer;
+    display: none; /* Caché sur les grands écrans */
+  }
+  
+  .header .menu-btn {
+    display: none; /* Caché sur les grands écrans */
+  }
+  
+  
+        /* LA BANIERE */
+      .banier_image{
+        margin-top: 100px;
+        width: 100%;
+        height: 700px;
+        background-image: url("../images/fond-monochrome-blanc-style-papier.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .banier{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .text_banier{
+        color: #1e2029;
+        margin-top: 100px;
+      }
+      .text_banier h1{
+        font-size: 53px;
+      }
+      
+      .picture_banier{
+        width: 45%;
+        margin-top: 100px;
+        /* height: 150px;
+        border: 2px solid green; */
+      }
+      .picture_banier img{
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+      }
+  
+        /* SECTION HERO OU LE DIRECTEUR PARLE AVEC SA PHOTO */
+        .hero{
+          background-color: #1e2029;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+  
+  
+          }
+          .leader{
+          font-size:x-large;
+          color: white;
+          font-style: italic;
+          text-align: justify;
+          }
+          .small-image{
+          margin-top: 100px;
+          border-radius: 15px;
+          }
+          .display-4{
+          margin-top: 0px;
+          color: white;
+          font-style: oblique;
+          text-decoration: underline;
+      
+          }
+          .small-image{
+            width: 100%;
+            border-radius: 7%;
+            padding: 10px 20px;
+            height: auto;
+            /* Ajustements pour fusionner avec le fond */
+            opacity: 0.95; /* Réduit légèrement l'opacité pour adoucir l'apparence */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce pour mieux s'intégrer */
+            transition: opacity 0.3s ease; /* Douce transition pour l'image */
+          }
+          .small-image:hover {
+            opacity: 1; /* Rétablit l'opacité complète au survol */
+        }
+      
+      /* FIN DE LA SECTION HERO */
+          /* DEBUT LE PROGRAMME */
+        .programme{
+          background-color: #1e2029;
+          text-align: center;
+          color: white;
+          font-size:x-large;
+          width: 100%;
+          height: auto;
+          margin-top: -30px;
+      
+        }
+        .text_programme{
+          height: 100px;
+          width: 70%;
+          margin: 0 auto;
+          height: auto;
+        }
+        .text_programme p{
+          margin: 0 auto;
+          text-align: justify;
+        }
+  
+        /* FIN DU PROGRAMME */
+  .icones {
+    margin: 0;
+    padding: 0;
+    background-color: #1e2029;
+    font-family: "poppins", sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 170px;
+    margin: 25px;
+    border: 1px solid black;
+    padding: 0px 0px;
+    background-color: #222327;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .card .card__icon {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  
+  .card .card__icon img {
+    height: 75px;
+  }
+  
+  .card h6 {
+    margin-bottom: 10px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .card ul li {
+    list-style: none;
+    padding: 3px 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.7;
+  }
+  
+  .card.selected::before {
+    content: "";
+    width: 50%;
+    /* height: 50%; */
+    position: absolute;
+    right: -25px;
+    bottom: -30px;
+    /* background: url(https://i.imgur.com/WunqBPz.png); */
+    background-position: right;
+    background-size: 10px;
+    z-index: -1;
+  }
+  
+  .card.selected {
+    background-color: #161619;
+     /* Bordure blanche */
+    border: 1px solid #ffffff;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3); /* Ombre intense */
+  }
+  /* FIN DE SECTION NOTRE PROGRAMME */
+  /* NOS VALEURS */
+    .container_valeurs{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 60%;
+      height: 200px;
+      box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5); /* Ombre intense */
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .card1 img{
+      width: 100%;
+    }
+  
+  /* DEBUT DE L'ARTICLE */
+  
+  .text_nos_formations h3{
+    margin-top: 20px;
+  }
+  .espace{
+    width: 100%;
+    height: 50px;
+  }
+  .apprenantsretour{
+    margin-top: 10px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  section.cardarticle {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    background:#f6f6f6;
+    border-radius:24px 24px 24px 48px;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    justify-items: center;
+    margin-bottom: 25px;
+    box-shadow:
+      5px 0 0 0 fade(#ccc,30%),
+      -5px 0 0 0 fade(#ccc,30%),
+      0 5px 0 0 fade(#ccc,30%);
+    .text-content {
+      display:flex;
+      flex-direction:column;
+      text-align: center;
+      h3 {
+        text-align: justify;
+        margin:0;
+        padding: 10px;
+        font-size:1.5em;
+        max-width:20ch;
+      }
+      p {
+        padding: 25px;
+        text-align: justify;
+      }
+      a {
+        border:3px solid #000;
+        color:#000;
+        align-self:flex-start;
+        text-decoration:none;
+        padding:16px 32px;
+        border-radius:12px;
+        transition:400ms all;
+        &:hover {
+          background:#000;
+          color:white
+        }
+      }
+    }
+    .visual {
+      margin: 0 auto;
+      height:300px;
+      width: auto;
+      overflow:hidden;
+      border-radius:24px;
+      box-shadow:
+        1px 2px 6px fade(white,25%),
+        2px 6px 12px fade(black,25%);
+      img { 
+        height:100%;
+      }
+    }
+    &:nth-of-type(odd) {
+      margin:0px;
+      border-radius:24px 24px 48px 24px;
+      .text-content {
+        text-align: center;
+      }
+    }
+  
+  }
+        /*  DEBUT SECTION LOCALISATION */
+    .Information_localisation{
+      width: 80%;
+      height: 300px;
+      border: 1px solid transparent;
+      margin: 0 auto;
+      margin-top: 20px;
+      border-radius:24px 24px 24px 48px;
+      margin-bottom: 20px;
+    
+    }
+    .localisation iframe{
+      width: 100%;
+      height: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    /* FIN SECTION LOCALISATION */
+  
+    /* DEBUT FOOTER */
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+  
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+      }
+  
+      body{
+        font-family: 'Montserrat', sans-serif;
+      }
+  
+      .main-footer {
+        padding: 70px 0;
+        display: flex;
+        /* justify-content: space-evenly; */
+        justify-content: space-between;
+        background-color: #000000;
+        width: 80%;
+        margin: 0 auto;
+      }
+  
+      .main-footer ul {
+        list-style: none;
+      }
+  
+      .main-footer h1 {
+        font-size: 22px;
+        line-height: 117%;
+        color: #ffffff;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+  
+      .main-footer h2 {
+        color: #ffffff;
+        font-weight: 500;
+      }
+  
+      .main-footer ul li a {
+        color: #ffffffcc;
+        text-decoration:none;
+      }
+  
+      /* DEBUT FOOTER  */
 
-} 
-
+      footer {
+        background-color: #000000;
+        border-top: 2px solid white ;
+        font-size: 17px;
+        padding: 15px 5px;
+        color: #ffffff;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+      }
+  
+      footer a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+  
+      .logoinfo p {
+        color: #6EB981;
+        font-size: 17px;
+        margin-top: 5px;
+      }
+  
+      .contact-details {
+        margin-top: 20px;
+        text-align: center;
+      }
+  
+      .contact-details li {
+        list-style: none;
+        margin: 10px 0;
+      }
+  
+      .contact-details li a {
+        text-decoration:none;
+        color: #f1f1f1;
+      }
+  
+      .contact-details .fa {
+        color: #f1f1f1;
+        margin-right: 10px;
+      }
+  
+      .sociallogos{
+        padding:20px 0;
+      }
+  
+      .sociallogos .logobox a{
+        padding:0 10px;
+        text-decoration:none;
+        color:#ffffff;
+        font-size:22px;
+      }
+      .com h1{
+        text-align: center;
+      }
+      .com li{
+        padding:5px 0;
+        display: inline;
+        list-style: none;
+        margin: 0 auto;
+      
+      }
+      .linkedin img{
+        width: 30px;
+        height: 30px;
+      }
+      /* FIN FOOTER */
+}
 /* SMARTHPHONE */
 @media screen and (max-width: 767px) {
   .container{
@@ -735,12 +1204,14 @@ a img{
     width: 80%; /* Ajuste la largeur de l'image pour éviter qu'elle prenne trop de place */
     margin-top: 20px; /* Réduit l'espacement supérieur */
     margin: 0 auto;
+  
   }
 
     .picture_banier img {
       width: 100%;
       height: auto;
       margin: 0 auto;
+      border-radius: 7px;
     }
 
     /* SECTION HERO OU LE DIRECTEUR PARLE AVEC SA PHOTO */
@@ -751,6 +1222,7 @@ a img{
       justify-content: space-between;
     }
     .hero{
+      margin-top: -23px;
       height: auto;
       background-color: #1e2029;
       }
@@ -1016,27 +1488,37 @@ section.cardarticle {
     }
     /* FIN SECTION LOCALISATION */
     /* DEBUT FOOTER  */
-
     footer {
       background-color: #000000;
       border-top: 2px solid white ;
       font-size: 17px;
       padding: 15px 5px;
       color: #ffffff;
-      text-align: center;
+      text-align: left;
       width: 100%;
       margin: 0 auto;
     }
-
+    .com{
+      text-align: left;
+    }
+   
     footer a {
       text-decoration: none;
       color: #ffffff;
+      text-align: center;
     }
-
+    .contact-details li{
+      text-align: left;
+    }
+    .contact-details h1{
+      font-size: large;
+      text-align: left;
+    }
     .logoinfo p {
       color: #6EB981;
       font-size: 17px;
       margin-top: 5px;
+      text-align: left;
     }
 
     .contact-details {
@@ -1062,7 +1544,13 @@ section.cardarticle {
     .sociallogos{
       padding:20px 0;
     }
-
+    .logobox{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      margin: 0 auto;
+    }
     .sociallogos .logobox a{
       padding:0 10px;
       text-decoration:none;
@@ -1106,17 +1594,4 @@ section.cardarticle {
     .info{
       padding:20px 0;
   }
-}
-
-@media (max-width: 480px) {
-  .main-footer {
-    grid-template-columns: 1fr;
-  }
-  .sociallogos{
-    padding:20px 0;
-  }
-  .com{
-    padding:20px 0;
-  } 
-
 }
