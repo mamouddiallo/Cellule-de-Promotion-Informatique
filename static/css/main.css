@@ -539,7 +539,8 @@ section.cardarticle {
     margin-top: 10px;
   }
   .box-elemen p{
-    text-align: center;
+    text-align: justify;
+    hyphens: auto;
 
   }
 /* FIN DE LA SECTION NOS FORMATIONS */
@@ -986,6 +987,7 @@ section.cardarticle {
           margin:0;
           padding:0;
           box-sizing:border-box;
+        
         }
     
         body{
