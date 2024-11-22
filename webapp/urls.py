@@ -3,7 +3,7 @@ from.import views
 app_name = "webapp"
 
 urlpatterns = [
-    path('', views.home, name="shop"),
+    path('', views.home, name="home"),
     path('formations/', views.formations, name="formations"),
     path('apropos/', views.apropos, name='apropos'),  
     path('contact/', views.contact, name="contact"),

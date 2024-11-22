@@ -21,10 +21,10 @@
             <input class="menu-btn" type="checkbox" id="menu-btn">
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
             <ul class="menu">
-                <li><a href="#" class="active">Accueil</a></li>
-                <li><a href="#">Nos Formations</a></li>
-                <li><a href="#">A propos</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'webapp:home'%}" >Accueil</a></li>
+                <li><a href="{% url 'webapp:formations' %}">Nos Formations</a></li>
+                <li><a href="{% url 'webapp:apropos' %}">A propos</a></li>
+                <li><a href="{% url 'webapp:contact' %}">Contact</a></li>
         
             </ul>
         </div>

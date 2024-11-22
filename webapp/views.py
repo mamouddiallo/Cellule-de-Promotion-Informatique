@@ -27,4 +27,4 @@ def contact(request, *args, **kwargs):
 def apropos(request, *args, **kwargs):
     context={}
     
-    return render(request, 'webapp/contact.html', context)
+    return render(request, 'webapp/apropos.html', context)

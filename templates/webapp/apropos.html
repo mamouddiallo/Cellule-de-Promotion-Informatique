@@ -1,6 +1,126 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<h2> apropos</h2>
-<img src="{% static 'images/panier.png' %}" alt="panier">
+
+
+<h2> apropos de Nous</h2>
+{% comment %} <!DOCTYPE html>
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Website About Us Page HTML CSS</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body> {% endcomment %}
+    <section class="about-us">
+      <div class="about">
+        <img src="{% static 'images/business-hands-joined-together-teamwork.png' %}" >
+        <div class="text">
+          <h2>A propos de nous</h2>
+          <p>La Cellule de Promotion Informatique est une structure spécialisée dans la formation et le renforcement des capacités de tous ceux ou celles qui désirent maîtriser et avoir une grande expertise dans le domaine de l’informatique et de l’Internet.
+            Elle dispose d’hommes et de matériels de qualité qui lui permettent d’offrir à tout moment des formations personnalisées.
+            C’est une structure qui a plus de 20 ans d’expérience et dont la rigueur et la pédagogie lui ont valu une renommée et un respect dans son domaine d’activité.
+            Notre objectif est de permettre à tous ceux et celles qui le souhaitent, de maîtriser les nouvelles technologies et d’avoir une grande connaissance dans les domaines de l’informatique et de l’Internet.
+            Désormais l’ordinateur et sa science informatique ont un nom : La Cellule de Promotion Informatique. 
+            Que Dieu vous bénisse !</p>
+        </div>
+      </div>
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+        }
+        .about-us {
+          display: flex;
+          align-items: center;
+          height: 100vh;
+          width: 100%;
+          padding: 90px 0;
+          background: #fff;
+          margin-top:100px;
+        }
+        
+        .pic {
+          height: auto;
+          width: 400px;
+          border-radius: 12px;
+        }
+        
+        .about {
+          width: 1130px;
+          max-width: 85%;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+        }
+        
+        .text {
+          width: 540px;
+          text-align: justify;
+          
+        }
+        
+        .text h2 {
+          color: #333;
+          font-size: 30px;
+          font-weight: 12px;
+          margin-bottom: 10px;
+        }
+        
+        .text h5 {
+          color: #333;
+          font-size: 22px;
+          font-weight: 500;
+          margin-bottom: 20px;
+        }
+        
+        span {
+          color: #4070f4;
+        }
+        
+        .text p {
+          color: #333;
+          font-size: 18px;
+          line-height: 25px;
+          letter-spacing: 1px;
+        }
+        
+        .data {
+          margin-top: 30px;
+        }
+        
+        .hire {
+          font-size: 18px;
+          background: #4070f4;
+          color: #fff;
+          text-decoration: none;
+          border: none;
+          padding: 12px 25px;
+          border-radius: 6px;
+          transition: 0.5s;
+        }
+        
+        .hire:hover {
+          background: #000;
+        }
+        .about img{ 
+            margin-top:20px;
+            width:45%;
+            height:400px;
+        }
+      </style>
+    </section>
+    <style>
+ 
+    </style>
+  {% comment %} </body>
+</html> {% endcomment %}
 {% endblock %}
