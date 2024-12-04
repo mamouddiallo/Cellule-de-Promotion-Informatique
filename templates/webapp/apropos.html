@@ -2,8 +2,6 @@
 {% load static %}
 {% block content %}
 
-
-<h2> apropos de Nous</h2>
 {% comment %} <!DOCTYPE html>
 <!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
@@ -16,10 +14,13 @@
   </head>
   <body> {% endcomment %}
     <section class="about-us">
-      <div class="about">
-        <img src="{% static 'images/business-hands-joined-together-teamwork.png' %}" >
-        <div class="text">
-          <h2>A propos de nous</h2>
+    
+      
+      <div class="row">
+        <h2>À propos de nous </h2>
+        <div class="column" >
+          <img src="{% static 'images/business-hands-joined-together-teamwork (1).png' %}" alt="Description" style="width: 100%; height: 115%; border-radius: 5px; margin-top:15px">        </div>
+        <div class="column" >
           <p>La Cellule de Promotion Informatique est une structure spécialisée dans la formation et le renforcement des capacités de tous ceux ou celles qui désirent maîtriser et avoir une grande expertise dans le domaine de l’informatique et de l’Internet.
             Elle dispose d’hommes et de matériels de qualité qui lui permettent d’offrir à tout moment des formations personnalisées.
             C’est une structure qui a plus de 20 ans d’expérience et dont la rigueur et la pédagogie lui ont valu une renommée et un respect dans son domaine d’activité.
@@ -28,6 +29,20 @@
             Que Dieu vous bénisse !</p>
         </div>
       </div>
+      
+      {% comment %} <div class="about">
+        <img src="{% static 'images/business-hands-joined-together-teamwork (1).png' %}" >
+        <div class="text">
+          <h2>A propos de nous</h2>
+          <p><strong>La Cellule de Promotion Informatique</strong> est une structure spécialisée dans la formation et le renforcement des capacités de tous ceux ou celles qui désirent maîtriser et avoir une grande expertise dans le domaine de l’informatique et de l’Internet.
+            Elle dispose d’hommes et de matériels de qualité qui lui permettent d’offrir à tout moment des formations personnalisées.<br><br>
+            C’est une structure qui a plus de 20 ans d’expérience et dont la rigueur et la pédagogie lui ont valu une renommée et un respect dans son domaine d’activité.
+            Notre objectif est de permettre à tous ceux et celles qui le souhaitent, de maîtriser les nouvelles technologies et d’avoir une grande connaissance dans les domaines de l’informatique et de l’Internet.
+            Désormais l’ordinateur et sa science informatique ont un nom : <strong>La Cellule de Promotion Informatique</strong>. 
+            Que Dieu vous bénisse !</p>
+        </div>
+      </div>
+      
       <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
 
@@ -37,90 +52,240 @@
           box-sizing: border-box;
           font-family: "Poppins", sans-serif;
         }
-        .about-us {
-          display: flex;
-          align-items: center;
-          height: 100vh;
-          width: 100%;
-          padding: 90px 0;
-          background: #fff;
-          margin-top:100px;
-        }
-        
-        .pic {
-          height: auto;
-          width: 400px;
-          border-radius: 12px;
-        }
-        
-        .about {
-          width: 1130px;
-          max-width: 85%;
-          margin: 0 auto;
-          display: flex;
-          align-items: center;
-          justify-content: space-around;
-        }
-        
-        .text {
-          width: 540px;
-          text-align: justify;
+        /* ######## ORDINATEUR ######## */
+        @media screen and (min-width: 1024px) {
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+          }
+          .about-us {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            padding: 90px 0;
+            background: #fff;
+            margin-top:100px;
+          }
           
+          .pic {
+            height: auto;
+            width: 400px;
+            border-radius: 12px;
+          }
+          
+          .about {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+          }
+          
+          .text {
+            width: 100%; /* S'assure que la largeur est limitée à celle de la div parente */
+            height: auto; /* Ajuste la hauteur en fonction du contenu */
+            text-align: justify; /* Texte justifié */
+            padding: 10px; /* Ajoute un espace intérieur pour éviter que le texte touche les bords */
+            box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+            word-wrap: break-word; /* Coupe les mots longs pour éviter le débordement horizontal */
+    
+          }
+          
+          .text h2 {
+            color: #333;
+            font-size: 30px;
+            font-weight: 12px;
+            margin-bottom: 10px;
+          }
+          
+          .text h5 {
+            color: #333;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 20px;
+          }
+          
+          span {
+            color: #4070f4;
+          }
+          
+          .text p {
+            color: #333;
+            font-size: 18px;
+            line-height: 25px;
+            letter-spacing: 1px;
+          }
+          
+          .data {
+            margin-top: 30px;
+          }
+          
+          .hire {
+            font-size: 18px;
+            background: #4070f4;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            transition: 0.5s;
+          }
+          
+          .hire:hover {
+            background: #000;
+          }
+          .about img{ 
+              margin-top:20px;
+              width:45%;
+              height:auto;
+          }
+        }
+        /* ######## TABLETTE ######## */
+        @media screen and (min-width: 767px) and (max-width: 1023px) {
+          .about {
+            flex-direction: column;
+            align-items: center;
+          }
+    
+          .text {
+            max-width: 80%;
+              text-align: justify;
+            margin: 0 auto;
+          }
+    
+          .text h2 {
+            font-size: 2rem;
+          }
+    
+          .text p {
+            font-size: 1rem;
+          }
+    
+          .about img {
+            width: 70%;
+            margin-top: 20px;
+          }
+        }
+    
+        /* ######## SMARTPHONE ######## */
+        @media screen and (max-width: 767px) {
+          .about {
+            flex-direction: column;
+            align-items: center;
+          }
+    
+          .text {
+            max-width: 90%;
+            text-align: justify;
+            margin: 0 auto;
+          }
+    
+          .text h2 {
+            font-size: 1.5rem;
+            text-align:center;
+          }
+    
+          .text p {
+            font-size: 0.9rem;
+          }
+    
+          .about img {
+            width: 100%;
+            margin-top: 15px;
+          }
         }
         
-        .text h2 {
-          color: #333;
-          font-size: 30px;
-          font-weight: 12px;
-          margin-bottom: 10px;
-        }
-        
-        .text h5 {
-          color: #333;
-          font-size: 22px;
-          font-weight: 500;
-          margin-bottom: 20px;
-        }
-        
-        span {
-          color: #4070f4;
-        }
-        
-        .text p {
-          color: #333;
-          font-size: 18px;
-          line-height: 25px;
-          letter-spacing: 1px;
-        }
-        
-        .data {
-          margin-top: 30px;
-        }
-        
-        .hire {
-          font-size: 18px;
-          background: #4070f4;
-          color: #fff;
-          text-decoration: none;
-          border: none;
-          padding: 12px 25px;
-          border-radius: 6px;
-          transition: 0.5s;
-        }
-        
-        .hire:hover {
-          background: #000;
-        }
-        .about img{ 
-            margin-top:20px;
-            width:45%;
-            height:400px;
-        }
-      </style>
+      </style> {% endcomment %}
     </section>
     <style>
- 
-    </style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      .row {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 150px;
+        margin-bottom: 100px;
+      }
+      
+      .row h2 {
+        text-align: center;
+        font-size: 40px;
+      }
+      
+      /* Colonnes de base pour ordinateurs */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        text-align: justify;
+        font-weight: bold;
+      }
+      
+      .column img {
+        width: 100%; /* L'image occupe toute la largeur de la colonne */
+        height: auto; /* Garde les proportions de l'image */
+        border-radius: 8px; /* Ajoute un arrondi */
+      }
+      
+      /* Clear floats après les colonnes */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* ####### ORDINATEUR (min-width: 1024px) ######## */
+      @media screen and (min-width: 1024px) {
+        .row {
+          width: 75%; /* Réduire légèrement la largeur pour plus d'espace */
+        }
+      
+        .column {
+          width: 48%; /* Assurez une séparation avec un léger espace */
+          margin: 1%; /* Ajouter un espace entre les colonnes */
+        }
+      }
+      
+      /* ####### TABLETTE (entre 768px et 1023px) ######## */
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .row h2 {
+          margin-top:10px;
+        }
+        .column {
+          width: 80%;
+          margin: 10px auto; /* Centre les colonnes */
+          text-align: justify; 
+        }
+      
+        .row h2 {
+          font-size: 30px; /* Taille réduite du titre */
+        }
+      }
+      
+      /* ####### MOBILE (max-width: 767px) ######## */
+      @media screen and (max-width: 767px) {
+        .column {
+          width: 100%; /* Une seule colonne par ligne */
+          margin: 0 auto;
+          text-align: justify; 
+        }
+      
+        .row h2 {
+          font-size: 24px; /* Taille du titre adaptée */
+          margin-top:10px;
+        }
+      
+        .row {
+          margin-top: 100px;
+          margin-bottom: 50px;
+        }
+      }
+      
+      </style>
+  
   {% comment %} </body>
 </html> {% endcomment %}
 {% endblock %}
