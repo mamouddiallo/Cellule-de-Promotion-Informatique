@@ -2,27 +2,7 @@
 {% load static %}
 {% block content %}
 
-  <!-- <div id="carouselExampleControls" class="carouselslide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{% static 'images/medium-shot-women-working-together (1).jpg' %}" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="{% static 'images/black-woman-adult-student-working-computer-class (4).png' %}" class="d-block w-100" alt="black-woman-adult-student-working-computer-class (4).png">
-      </div>
-      <div class="carousel-item">
-        <img src="{% static 'images/salle.jpg' %}" class="d-block w-100" alt="...">
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> -->
+
 <div class="banier_image">
 <div class="banier">
   <div class="text_banier">
@@ -121,20 +101,22 @@
   <div class="les_formations">
     <div class="row">
       {% for formation in formations %}
-      <div class="col-lg-3">
-        <img src="{{ formation.image.url}}" alt="formation.png" />
-        <div class="box-elemen text">
-          <h6>{{ formation.name }}</h6>
-          <hr>
-          <p>{{formation.description}}</p>
-          <button class="btn btn-outline-secondary">En savoir plus</button>
-        </div>
-      </div>
-      
+        {% if forloop.counter <= 8 %}
+          <div class="col-lg-3">
+            <img src="{{ formation.image.url }}" alt="formation.png" />
+            <div class="box-elemen text">
+              <h6>{{ formation.name }}</h6>
+              <hr>
+              <p>{{ formation.description }}</p>
+              <button class="btn btn-outline-secondary">En savoir plus</button>
+            </div>
+          </div>
+        {% endif %}
       {% endfor %}    
     </div>
   </div>
 </section>
+
 <section class="apprenantsretour">
   <div class="text_nos_formations">
     <h3 class="display-4_texte">Ce que disent nos apprenants de la <strong>Cellule de Promotion Informatique</strong></h3>

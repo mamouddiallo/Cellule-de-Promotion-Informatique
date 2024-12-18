@@ -29,7 +29,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [ 'cellule-de-promotion-informatique-1.onrender.com', 'localhost', '127.0.0.1']
 
-# ,
+# 
+
 
 
 # Application definition

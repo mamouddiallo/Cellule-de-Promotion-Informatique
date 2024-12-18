@@ -2,5 +2,38 @@
 {% load static %}
 {% block content %}
 <h2> formations </h2>
-<img src="{% static 'images/panier.png'%}" alt="panier">
+<section class="formations">
+    <div class="text_nos_formations">
+      <h3 class="display-4_texte">Nos formations certifiantes de la <strong>Cellule de Promotion Informatique</strong></h3>
+    </div>
+    <div class="les_formations">
+      <div class="row">
+        {% for formation in formations %}
+        <div class="col-lg-3">
+          <img src="{{ formation.image.url}}" alt="formation.png" />
+          <div class="box-elemen text">
+            <h6>{{ formation.name }}</h6>
+            <hr>
+            <p>{{formation.description}}</p>
+            <button class="btn btn-outline-secondary"><a href="{% url 'webapp:formation_detail' formation.id %}">En savoir plus</a></button>            
+
+          </div>
+        </div>
+        {% endfor %}    
+      </div>
+    </div>
+  </section>
+  <style>
+   .text_nos_formations{
+        margin-top: 100px;
+          }
+    .les_formations{
+        margin-bottom: 100px;
+          }
+    .btn a{
+    color: black;
+    list-style: none;
+    text-decoration: none;
+}
+  </style>
 {% endblock%}

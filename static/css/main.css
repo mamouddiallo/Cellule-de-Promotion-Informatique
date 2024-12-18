@@ -1621,8 +1621,22 @@ section.cardarticle {
       width: 100%;
       margin: 0 auto;
     }
-    .com{
-      text-align: left;
+    .com h1{
+  
+      text-align: center;
+      font-size: large;
+      margin-left: 10px;
+    
+    }
+   
+    .com ul{
+  
+      display: flex;
+      flex-direction: column;
+      font-size: small;
+      text-align: left; /* Justifie le contenu à gauche */
+      padding-left: 0px; /* Ajoute un espace à gauche pour les puces ou numéros */
+      margin: 0; /* Supprime les marges par défaut, si nécessaire */
     }
    
     footer a {
@@ -1637,9 +1651,14 @@ section.cardarticle {
       font-size: large;
       text-align: left;
     }
+    .logoinfo h4 {
+
+      font-size: 17px;
+  
+    }
     .logoinfo p {
       color: #6EB981;
-      font-size: 17px;
+      font-size: small;
       margin-top: 5px;
       text-align: left;
     }
@@ -1652,6 +1671,7 @@ section.cardarticle {
     .contact-details li {
       list-style: none;
       margin: 10px 0;
+      font-size: small;
     }
 
     .contact-details li a {
@@ -1680,9 +1700,7 @@ section.cardarticle {
       color:#ffffff;
       font-size:22px;
     }
-    .com h1{
-      text-align: center;
-    }
+    
     .com li{
       padding:5px 0;
       display: inline;
