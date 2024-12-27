@@ -10,25 +10,29 @@
     
     <!-- Left contact page --> 
       
-      <form id="contact-form" class="form-horizontal" role="form">
+      <form onsubmit="sendEmail(); reset(); return false;" id="contact-form" class="form-horizontal" role="form">
          
         <div class="form-group">
           <div class="col-sm-12">
-            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+            <input type="text" class="form-control" id="name" placeholder="Nom" name="name" value="" required>
           </div>
         </div>
   
         <div class="form-group">
           <div class="col-sm-12">
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+            <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="" required>
           </div>
         </div>
-  
-        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="phone" placeholder="Numero de Telephone" name="phone" value="" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="Message" rows="10" placeholder="Message" name="message" required></textarea>
         
         <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
           <div class="alt-send-button">
-            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+            <i class="fa fa-paper-plane"></i><span class="send-text">Envoyer</span>
           </div>
         
         </button>
@@ -255,6 +259,25 @@ body {
   padding-bottom: 10px;
 }
 
-          
     </style>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      function sendEmail() {
+         
+          Email.send({
+          SecureToken:"0f0d1b10-ee73-42c1-ab6b-bd7ef48c1407",
+          Host : "smtp.gmail.com",
+          Username : "diallomamoud",
+          Password : "62402F7B43351B5B0CD32DA72F9806FB3A15",
+          To : 'diallomamoud298@gmail.com',
+          From : document.getElementById("email").value,
+          Subject : "Nouveau Prospect depuis le  Formulaire",
+          Body : "Name : " + document.getElementById("name").value
+          + "<br> Email :" + document.getElementById("email").value
+          + "<br> Message :" + document.getElementById("Message").value
+    }).then(
+      message => alert("Nous avons bien reçu votre formulaire. Notre équipe vous contactera dans les plus brefs délais pour vous fournir les informations nécessaires et répondre à vos questions.")
+    );
+    }
+    </script>
 {% endblock %} 

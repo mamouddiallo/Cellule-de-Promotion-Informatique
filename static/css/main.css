@@ -100,7 +100,7 @@ a img{
     
     .picture_banier{
       width: 45%;
-      margin-top: 100px;
+      margin-top: 80px;
       /* height: 150px;
       border: 2px solid green; */
     }
@@ -108,6 +108,8 @@ a img{
       width: 100%;
       height: auto;
       border-radius: 15px;
+      margin-bottom: 20px;
+
     }
 
       /* SECTION HERO OU LE DIRECTEUR PARLE AVEC SA PHOTO */
@@ -139,12 +141,13 @@ a img{
         .small-image{
           width: 100%;
           border-radius: 7%;
-          padding: 10px 20px;
+          padding: 20px 20px;
           height: auto;
           /* Ajustements pour fusionner avec le fond */
           opacity: 0.95; /* Réduit légèrement l'opacité pour adoucir l'apparence */
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce pour mieux s'intégrer */
           transition: opacity 0.3s ease; /* Douce transition pour l'image */
+          margin-bottom: 20px;
         }
         .small-image:hover {
           opacity: 1; /* Rétablit l'opacité complète au survol */
