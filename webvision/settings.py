@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-^7zz16!iv%9j+_m0=#^kyyav$5=z(m1g#eg(m&h)z9y0+hf+lr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'cellule-de-promotion-informatique-1.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [ 'cellule-de-promotion-informatique-1.onrender.com', 'localhost', '127.0.0.1', 'cellule-promotion-informatique.onrender.com']
 
 # 
 
