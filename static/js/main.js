@@ -1,4 +1,4 @@
-console.log("Hello World!");
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // Sélectionner toutes les cartes avec la classe "card"

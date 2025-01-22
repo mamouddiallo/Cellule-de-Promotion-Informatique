@@ -261,23 +261,7 @@ body {
 
     </style>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-      function sendEmail() {
-         
-          Email.send({
-          SecureToken:"0f0d1b10-ee73-42c1-ab6b-bd7ef48c1407",
-          Host : "smtp.gmail.com",
-          Username : "diallomamoud",
-          Password : "62402F7B43351B5B0CD32DA72F9806FB3A15",
-          To : 'diallomamoud298@gmail.com',
-          From : document.getElementById("email").value,
-          Subject : "Nouveau Prospect depuis le  Formulaire",
-          Body : "Name : " + document.getElementById("name").value
-          + "<br> Email :" + document.getElementById("email").value
-          + "<br> Message :" + document.getElementById("Message").value
-    }).then(
-      message => alert("Nous avons bien reçu votre formulaire. Notre équipe vous contactera dans les plus brefs délais pour vous fournir les informations nécessaires et répondre à vos questions.")
-    );
-    }
-    </script>
+    <script text="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 {% endblock %} 
